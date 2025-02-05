@@ -5,10 +5,6 @@ import Section from "./Section.astro";
 
 import c1 from "../../assets/pics/card-pic1.png";
 import c2 from "../../assets/pics/card-pic2.png";
-import c3 from "../../assets/pics/card-pic3.png";
-import c4 from "../../assets/pics/card-pic4.png";
-import c5 from "../../assets/pics/card-pic5.png";
-import c6 from "../../assets/pics/card-pic6.png";
 
 const cards = [
   {
@@ -16,7 +12,7 @@ const cards = [
     titleTop: "Investigación y desarrollo",
     titleBottom: "de modelos de IA fundacionales",
     img: c1,
-    alt: "SEO",
+    alt: "Investigación y desarrollo de modelos de IA fundacionales",
     link: "https://google.com",
   },
   {
@@ -24,7 +20,7 @@ const cards = [
     titleTop: "Formación y",
     titleBottom: "capacitación",
     img: c2,
-    alt: "SEO",
+    alt: "Formación y capacitación",
     link: "https://google.com",
   },
 ];
@@ -35,7 +31,7 @@ const description =
 
 <Section>
   <div class="mt-[140px] mb-5">
-    <SectionTitle sectionTitle="Services" description={description} />
+    <SectionTitle sectionTitle="Iniciativas" description={description} />
     <div class="grid lg:grid-cols-2 lg:grid-rows-3 gap-10">
       {
         cards.map((card) => (
