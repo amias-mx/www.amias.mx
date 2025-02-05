@@ -1,20 +1,8 @@
-# ✨ Kreatif Software
-**[Landing](https://kreatif-software.netlify.app/)**
-Kreatif is a high-performance Landing page made with Astro and Tailwind. It's based on the original Figma design by [Olga Skuja](https://www.olgaskuja.design/).
+# Alianza Mexicana para la IA Soberana
 
-## Features
-- Clean and simple design.
-- Fully Responsive.
-- Fast and efficient thanks to Astro.
-- Customizable with Tailwind.
-- Highly optimized SEO.
+Un sitio prototipo para presentar la Alianza Mexicana para la IA Soberana, enfocada en impulsar el desarrollo y adopción de la inteligencia artificial en México.
 
-## ⚓ Lighthouse Score
-<p align="center">
-	<img width="600" alt="Lighthouse Score" src="https://raw.githubusercontent.com/vasquez-esteban/kreativ-software/master/lighthouse-score.svg"/>
-</p>
-
-## 🚀 Project Structure
+## Estructura del proyecto
 ```text
 /
 ├── public/
@@ -36,17 +24,29 @@ Kreatif is a high-performance Landing page made with Astro and Tailwind. It's ba
 └── package.json
 ```
 
-## 🧞 Commands
+## Comandos
 
-To run locally:
+Para ejecutar de manera local:
 
 | Comando          | Acción                                       |
 | :--------------- | :------------------------------------------- |
-| `git clone repo` | Clone Repo                          |
-| `cd repo`        | Access root dir                    |
-| `npm install`    | Install Deps                        |
-| `npm run dev`    | Run locally in `localhost:4321` |
+| `git clone repo` | Clonar el repositorio                        |
+| `cd repo`        | Acceder al directorio			                  |
+| `npm install`    | Instalar dependencias                        |
+| `npm run dev`    | Ejecturar de manera local `localhost:4321`   |
 
-## More information
+## Créditos
 
-- License & Credits in the Landig Page's footer.
+Basado en el template de [Astro Kreatif Landing](https://astro.build/themes/details/astro-kreatif-landing/)
+
+## Licencia
+
+The MIT License (MIT)
+
+Copyright (c) 2025 Luis Cosio
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
