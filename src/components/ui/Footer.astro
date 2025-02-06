@@ -7,9 +7,9 @@ import Twitter from "../../assets/twitter.svg";
 import ShortForm from "../ui/ShortForm.astro";
 
 const logos = [
-  { name: "Facebook", src: Facebook, link: "https://facebook.com" },
-  { name: "Linkedin", src: Linkedin, link: "https://linkedin.com" },
-  { name: "Twitter", src: Twitter, link: "https://twitter.com" },
+  { name: "Facebook", src: Facebook, link: "https://facebook.com/amias_mx" },
+  { name: "Linkedin", src: Linkedin, link: "https://linkedin.com/company/amias_mx" },
+  { name: "Twitter", src: Twitter, link: "https://x.com/amias_mx" },
 ];
 
 const links = [
@@ -33,45 +33,38 @@ const links = [
             </a>
           </picture>
           <ul class="flex flex-col sm:flex-row gap-5">
-            {
-              links.map((link) => {
-                return (
-                  <li class="text-center">
-                    <a class="underline" href={link.href}>
-                      {link.name}
-                    </a>
-                  </li>
-                );
-              })
-            }
+            {links.map((link) => (
+              <li class="text-center">
+                <a class="underline" href={link.href}>
+                  {link.name}
+                </a>
+              </li>
+            ))}
           </ul>
           <ul class="flex gap-5">
-            {
-              logos.map((logo) => {
-                return (
-                  <li>
-                    <a href={logo.link} target="_blank">
-                      <picture>
-                        <Image src={logo.src} alt={logo.name} />
-                      </picture>
-                    </a>
-                  </li>
-                );
-              })
-            }
+            {logos.map((logo) => (
+              <li>
+                <a href={logo.link} target="_blank">
+                  <picture>
+                    <Image src={logo.src} alt={logo.name} />
+                  </picture>
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
 
         <div class="flex flex-col lg:flex-row mt-[66px] mb-[51px]">
-          <div
-            class="flex text-center lg:text-start flex-col w-full lg:w-[30%]"
-          >
+          <div class="flex text-center lg:text-start flex-col w-full lg:w-[30%]">
             <h3 class="mb-5">Contáctanos:</h3>
             <div class="flex flex-col justify-between gap-4">
-              <span> Email: hola@amias.mx </span>
-              <span> Phone: +123 456 789 </span>
+              <span>Correo: hola@amais.mx</span>
+              <span>Teléfono: (+52) 55 6651 8800</span>
               <span class="lg:w-3/4">
-                Address: 1234 Street Name, City Name, Country Name
+                Av. Unión #163<br />
+                Piso 1, Col. Lafayette<br />
+                Guadalajara, Jalisco, México<br />
+                C.P. 44140
               </span>
             </div>
           </div>
@@ -85,7 +78,8 @@ const links = [
       <div
         class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0"
       >
-        <span>2025 Alianza Mexicana para la IA Soberana
+        <span>
+          2025 Alianza Mexicana para la IA Soberana
         </span>
       </div>
     </div>
