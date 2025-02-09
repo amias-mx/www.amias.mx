@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Facebook from "../../assets/facebook.svg";
 import Linkedin from "../../assets/linkedin.svg";
+import Github from "../../assets/github.svg";
 import Logo from "../../assets/logo-alt.svg";
 import Twitter from "../../assets/twitter.svg";
 import ShortForm from "../ui/ShortForm.astro";
@@ -10,10 +11,10 @@ const logos = [
   { name: "Facebook", src: Facebook, link: "https://facebook.com/amias_mx" },
   { name: "Linkedin", src: Linkedin, link: "https://linkedin.com/company/amias_mx" },
   { name: "Twitter", src: Twitter, link: "https://x.com/amias_mx" },
+  { name: "Github", src: Github, link: "https://github.com/amias-mx" },  // Added Github
 ];
 
 const links = [
-  { name: "Acerca de nosotros", href: "#about" },
   { name: "Iniciativas", href: "#services" },
 ];
 ---
@@ -79,7 +80,7 @@ const links = [
         class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0"
       >
         <span>
-          2025 Alianza Mexicana para la IA Soberana
+          Algunos Derechos Reservados, ®2025 Alianza Mexicana para la IA Soberana
         </span>
       </div>
     </div>
