@@ -3,15 +3,11 @@ import SectionTitle from "../ui/SectionTitle.astro";
 import ServiceCard from "../ui/ServiceCard.astro";
 import Section from "./Section.astro";
 
-import c1 from "../../assets/pics/research-svgrepo-com.svg";
-import c2 from "../../assets/pics/training-achievement-medal-svgrepo-com.svg";
-
 const cards = [
   {
     index: 1,
     titleTop: "Investigación y desarrollo",
     titleBottom: "de modelos de IA fundacionales",
-    img: c1,
     alt: "Investigación y desarrollo de modelos de IA fundacionales",
     link: "#services",
   },
@@ -19,7 +15,6 @@ const cards = [
     index: 2,
     titleTop: "Formación y",
     titleBottom: "capacitación",
-    img: c2,
     alt: "Formación y capacitación",
     link: "#services",
   },
@@ -39,7 +34,6 @@ const description =
             index={card.index}
             titleTop={card.titleTop}
             titleBottom={card.titleBottom}
-            img={card.img}
             alt={card.alt}
             link={card.link}
           />
