@@ -1,16 +1,27 @@
-<form
-  class="bg-[#292A32] px-10 py-14 rounded-[14px] gap-5 h-full flex flex-col sm:flex-row items-center justify-center"
->
+<form id="subscribeForm" class="bg-[#292A32] px-10 py-14 rounded-[14px] gap-5 h-full flex flex-col sm:flex-row items-center justify-center">
   <div class="w-full sm:w-[55%]">
     <input
-      type="text"
-      id="email"
+      type="email"
+      id="subscribeEmail"
       name="email"
       placeholder="Email"
+      required
       class="bg-transparent w-full px-[35px] py-5 border rounded-[14px] focus:outline-none"
     />
   </div>
-  <button type="submit" name="submit" class="w-full sm:w-[45%] btn-tertiary"
-    >Suscríbete a nuestra lista de distribución</button
-  >
+  <button type="submit" class="w-full sm:w-[45%] btn-tertiary">
+    Suscríbete a nuestra lista de distribución
+  </button>
 </form>
+
+<script>
+  document.getElementById('subscribeForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const email = (document.getElementById('subscribeEmail') as HTMLInputElement)?.value;
+    
+    const mailtoLink = `mailto:hola@amias.mx?subject=Suscripción AMIAS&body=Me gustaría suscribirme al boletín de AMIAS.%0D%0A%0D%0ACorreo: ${encodeURIComponent(email)}`;
+    
+    window.location.href = mailtoLink;
+  });
+</script>
