@@ -23,17 +23,20 @@ const sponsors = [
       Los participantes actuales de la Alianza Mexicana para la IA Soberana representan a más de 70 organizaciones, con un valor de mercado que supera los 3mil millones de pesos y que generan más de 10mil de empleos en todo el país—y esa lista sigue creciendo.
     </p>
   </div>
-  <div class="flex flex-wrap justify-between gap-7">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12 max-w-6xl mx-auto">
     {
       sponsors.map((sponsor) => (
-        <div class="flex items-center justify-center w-[200px] h-[100px]"> <!-- Fixed container size -->
-          <Image 
-            src={sponsor.logo} 
-            alt={sponsor.alt} 
-            loading="eager" 
-            class="w-auto h-auto max-w-full max-h-full object-contain" <!-- Responsive scaling within container -->
-          />
+        <div class="flex items-center justify-center min-h-[96px]">
+          <div class="relative w-full max-w-[180px] h-full px-4">
+            <Image 
+              src={sponsor.logo} 
+              alt={sponsor.alt} 
+              loading="eager"
+              class="w-full h-full object-contain"
+            />
+          </div>
         </div>
       ))
     }
-</Section>
+  </div>
+</Section
