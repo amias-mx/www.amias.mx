@@ -1,20 +1,18 @@
 ---
 import { Image } from "astro:assets";
-import s1 from "../../assets/pics/company-logo1.svg";
-import s2 from "../../assets/pics/company-logo2.svg";
-import s3 from "../../assets/pics/company-logo3.svg";
-import s4 from "../../assets/pics/company-logo4.svg";
-import s5 from "../../assets/pics/company-logo5.svg";
-import s6 from "../../assets/pics/company-logo6.svg";
+import s1 from "../../assets/pics/inbest.svg";
+import s2 from "../../assets/pics/wow.svg";
+import s3 from "../../assets/pics/cocktail.svg";
+import s4 from "../../assets/pics/servnet.svg";
+import s5 from "../../assets/pics/obok.svg";
 import Section from "./Section.astro";
 
 const sponsors = [
-  { logo: s1, alt: "Amazon logo" },
-  { logo: s2, alt: "Dribble logo" },
-  { logo: s3, alt: "HubSpot logo" },
-  { logo: s4, alt: "Notion logo" },
-  { logo: s5, alt: "Netflix logo" },
-  { logo: s6, alt: "Zoom logo" },
+  { logo: s1, alt: "iNBest" },
+  { logo: s2, alt: "WOW Innovación Creativa" },
+  { logo: s3, alt: "Cocktail" },
+  { logo: s4, alt: "Servnet" },
+  { logo: s5, alt: "Obok" },
 ];
 ---
 
@@ -25,15 +23,17 @@ const sponsors = [
       Los participantes actuales de la Alianza Mexicana para la IA Soberana representan a más de 70 organizaciones, con un valor de mercado que supera los 3mil millones de pesos y que generan más de 10mil de empleos en todo el país—y esa lista sigue creciendo.
     </p>
   </div>
-  <div class="flex flex-wrap justify-between gap-7 mt-[60px]">
+  <div class="flex flex-wrap justify-between gap-7">
     {
-      sponsors.map((sponsor) => {
-        return (
-          <div>
-            <Image src={sponsor.logo} alt={sponsor.alt} loading="eager" />
-          </div>
-        );
-      })
+      sponsors.map((sponsor) => (
+        <div class="flex items-center justify-center w-[200px] h-[100px]"> <!-- Fixed container size -->
+          <Image 
+            src={sponsor.logo} 
+            alt={sponsor.alt} 
+            loading="eager" 
+            class="w-auto h-auto max-w-full max-h-full object-contain" <!-- Responsive scaling within container -->
+          />
+        </div>
+      ))
     }
-  </div>
 </Section>
