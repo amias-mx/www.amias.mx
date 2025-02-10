@@ -1,8 +1,28 @@
 {
   "title": "Alianza Mexicana para la IA Soberana",
-  "description": "Sitio web de la Alianza Mexicana para la IA Soberana, impulsando la inteligencia artificial en México.",
+  "description": "Impulsamos el desarrollo y la adopción de la inteligencia artificial en México a través de la colaboración, la investigación y la soberanía tecnológica.",
+  "siteUrl": "https://www.amias.mx",
   "image": {
-    "src": "https://master--kreatif-software.netlify.app/og.png",
+    "src": "https://www.amias.mx/og.png",
     "alt": "Alianza Mexicana para la IA Soberana"
+  },
+  "social": {
+    "twitter": "@amias_mx",
+    "facebook": "amias_mx",
+    "linkedin": "company/amias_mx",
+    "github": "amias-mx"
+  },
+  "organization": {
+    "name": "Alianza Mexicana para la IA Soberana",
+    "legalName": "Alianza Mexicana para la IA Soberana A.C.",
+    "url": "https://www.amias.mx",
+    "logo": "https://www.amias.mx/logo.svg",
+    "address": {
+      "street": "Av. Unión #163",
+      "city": "Guadalajara",
+      "state": "Jalisco",
+      "postalCode": "44140",
+      "country": "México"
+    }
   }
 }

@@ -20,10 +20,6 @@ const { index, titleTop, titleBottom, img, alt, link } = Astro.props;
         >{titleBottom}</span
       >
     </h3>
-    <picture
-      class="w-full h-full row-span-1 order-1 lg:order-none lg:row-span-2 flex justify-center items-center"
-    >
-    </picture>
     <div class="flex items-end">
       <a href={link} class="flex items-center gap-3.5"
         ><Image src={index === 1 || index === 2 ? gob : wob} alt={alt} />
