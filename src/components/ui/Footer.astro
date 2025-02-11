@@ -12,10 +12,6 @@ const logos = [
   { name: "Linkedin", src: Linkedin, link: "https://linkedin.com/company/amias-mx" },
   { name: "Twitter", src: Twitter, link: "https://x.com/amias_mx" },
   { name: "Github", src: Github, link: "https://github.com/amias-mx" },
-]
-const links = [
-  // { name: "Iniciativas", href: "#services" }
-  {}
 ];
 ---
 
@@ -32,16 +28,7 @@ const links = [
             <a href="#home">
               <Image src={Logo} alt="Alianza Mexicana para la IA Soberana" />
             </a>
-          </picture>
-          <ul class="flex flex-col sm:flex-row gap-5">
-            {links.map((link) => (
-              <li class="text-center">
-                <a class="underline" href={link.href}>
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+          </picture>S
           <ul class="flex gap-5">
             {logos.map((logo) => (
               <li>
