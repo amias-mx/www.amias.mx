@@ -33,7 +33,7 @@ Para ejecutar de manera local:
 | `git clone repo` | Clonar el repositorio                        |
 | `cd repo`        | Acceder al directorio			                  |
 | `npm install`    | Instalar dependencias                        |
-| `npm run dev`    | Ejecturar de manera local `localhost:4321`   |
+| `npm run dev`    | Ejecutar de manera local `localhost:4321`   |
 
 ## Créditos
 
