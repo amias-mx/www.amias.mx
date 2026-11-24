@@ -1,35 +1,21 @@
-import siteData from "../data/siteData.json";
-import { slugify } from "./slugify";
+import site from "../data/siteData.json";
+import logo from "../assets/logo.svg?url&no-inline";
 
-export default function jsonLDGenerator({ type, post, url }) {
-  // If the page has CMS data, use it.
-  if (type === "post") {
-    return `<script type="application/ld+json">
+export default function jsonLDGenerator() {
+  const root = new URL("/", site.siteUrl).href;
+  const organization = root + "#organizacion";
+  const {address} = site.organization;
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
       {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "${url}"
-        },
-        "headline": "${post.title}",
-        "description": "${post.description}",
-        "image": "${post.image.src}",
-        "author": {
-          "@type": "Person",
-          "name": "${post.author}",
-          "url": "/author/${slugify(post.author)}"
-        },
-        "datePublished": "${post.date}"
-      }
-    </script>`;
-  }
-  return `<script type="application/ld+json">
-      {
-      "@context": "https://schema.org/",
-      "@type": "WebSite",
-      "name": "${siteData.title}",
-      "url": "${import.meta.env.SITE}"
-      }
-    </script>`;
+        "@type": "Organization", "@id": organization, name: site.title, alternateName: "AMIAS",
+        url: root, logo: new URL(logo, root).href, email: "hola@amias.mx", telephone: "+52 55 6651 8800",
+        address: { "@type": "PostalAddress", streetAddress: address.street, addressLocality: address.city,
+          addressRegion: address.state, postalCode: address.postalCode, addressCountry: "MX" },
+      },
+      { "@type": "WebSite", "@id": root + "#sitio", name: site.title, alternateName: "AMIAS",
+        url: root, inLanguage: "es-MX", publisher: { "@id": organization } },
+    ],
+  };
 }

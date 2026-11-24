@@ -1,0 +1,9 @@
+{
+  "intro": "La Alianza Mexicana para la IA Soberana (AMIAS) reúne a la academia, la industria, el gobierno y la sociedad civil para investigar, desarrollar y usar inteligencia artificial de forma responsable en México.",
+  "join": "https://amias.zapier.app/unete",
+  "questions": [
+    {"question": "¿Qué significa IA soberana para AMIAS?", "answer": "Es la capacidad de México para desarrollar y operar modelos con datos, talento e infraestructura que respondan a sus necesidades. Una prioridad de la alianza es que los modelos reflejen el contexto cultural del país."},
+    {"question": "¿En qué trabaja la alianza?", "answer": "Sus dos líneas de trabajo son la investigación de modelos fundacionales y la formación de personas que puedan desarrollarlos y utilizarlos. Los modelos fundacionales se entrenan con grandes volúmenes de datos y se adaptan a distintas tareas."},
+    {"question": "¿Cómo puedo participar?", "answer": "Completa el formulario de incorporación de AMIAS. Si quieres proponer una colaboración o consultar algo antes de registrarte, escribe a hola@amias.mx."}
+  ]
+}

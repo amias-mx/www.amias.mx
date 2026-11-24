@@ -3,32 +3,14 @@ import "../styles/globals.css";
 import Footer from "../components/ui/Footer.astro";
 import Navbar from "../components/ui/Navbar.astro";
 import MainHead from "./MainHead.astro";
-
-const { ...props } = Astro.props;
 ---
-
+<!doctype html>
 <html lang="es-MX">
-  <MainHead {...props} />
-  <style>
-    html.lenis {
-      height: auto;
-    }
-    .lenis.lenis-smooth {
-      scroll-behavior: auto;
-    }
-    .lenis.lenis-smooth [data-lenis-prevent] {
-      overscroll-behavior: contain;
-    }
-    .lenis.lenis-stopped {
-      overflow: hidden;
-    }
-  </style>
-  <script src="../utils/lenis"></script>
+  <MainHead {...Astro.props} />
   <body>
-    <main>
-      <Navbar />
-      <slot />
-      <Footer />
-    </main>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <Navbar />
+    <main id="contenido" tabindex="-1"><slot /></main>
+    <Footer />
   </body>
 </html>

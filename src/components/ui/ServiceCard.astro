@@ -1,36 +1,13 @@
 ---
-import { Image } from "astro:assets";
-import Card from "./Card.astro";
-
-import gob from "../../assets/icon1.svg";
-import wob from "../../assets/icon2.svg";
-
-const { index, titleTop, titleBottom, alt, link } = Astro.props;
+const {titleTop, titleBottom, link, index} = Astro.props;
 ---
-
-<Card isUnderline={true}>
-  <div
-    class=`h-[300px] w-full sm:h-full lg:gap-[60px] grid custom-grid lg:grid-cols-2 lg:grid-rows-1 p-8 sm:p-[50px] rounded-[45px] ${index === 1 ? 'bg-white' : index === 2 ? 'bg-green' : 'bg-dark text-white'}`
-  >
-    <h3 class=`flex flex-col col-span-2 lg:col-span-1`>
-      <span class=`w-[fit-content] ${index === 1 ? 'greenhead' : 'whitehead'}`
-        >{titleTop}</span
-      >
-      <span class=`w-[fit-content] ${index === 1 ? 'greenhead' : 'whitehead'}`
-        >{titleBottom}</span
-      >
-    </h3>
-    <div class="flex items-end">
-      <a href={link} class="flex items-center gap-3.5"
-        ><Image src={index === 1 || index === 2 ? gob : wob} alt={alt} />
-        <span class="hidden sm:block">Más información</span></a
-      >
-    </div>
-  </div>
-</Card>
-
+<a class="initiative" href={link}>
+  <h3>{titleTop} {titleBottom}</h3>
+  <p>{index === 1 ? "Modelos adaptados al contexto de México para la investigación, la industria y los servicios públicos." : "Desarrollo de capacidades para investigar, construir y utilizar sistemas de inteligencia artificial."}</p>
+  <span>Ver objetivo <span aria-hidden="true">→</span></span>
+</a>
 <style>
-  .custom-grid {
-    grid-template: auto auto;
-  }
+  .initiative {display:flex;align-items:flex-start;flex-direction:column;border:1px solid #bccdc1;border-top:4px solid #006847;border-radius:.7rem;background:#f5f7f2;padding:clamp(1.4rem,3.5vw,2.8rem);gap:1rem}
+  .initiative:hover {background:#eaf2e9}.initiative h3 {line-height:1.2;text-wrap:balance;max-width:26ch}.initiative p {line-height:1.55;max-width:46ch}
+  .initiative>span {color:#075e42;font-weight:500;font-size:1rem;margin-top:auto;text-decoration:underline;text-underline-offset:.25em}
 </style>

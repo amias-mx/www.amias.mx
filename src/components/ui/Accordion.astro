@@ -46,3 +46,12 @@ const content = [
     );
   })
 }
+
+<script>
+  function openLinkedObjective() {
+    const target = document.getElementById(window.location.hash.slice(1));
+    if (target instanceof HTMLDetailsElement && target.matches(".objective")) target.open = true;
+  }
+  window.addEventListener("hashchange", openLinkedObjective);
+  openLinkedObjective();
+</script>

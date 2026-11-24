@@ -3,13 +3,13 @@ import { Image } from "astro:assets";
 import decorForm from "../../assets/pics/contact-banner_1@4x.png";
 ---
 
-<div class="flex relative justify-start items-center p-[60px] bg-[#F3F3F3] rounded-[45px] overflow-hidden">
-  <form id="contactForm" class="bg-white sm:p-6 h-full w-full lg:max-w-lg">
+<div class="flex relative justify-start items-center p-4 sm:p-8 lg:p-[60px] bg-[#F3F3F3] rounded-[45px] overflow-hidden">
+  <form id="contactForm" action="mailto:hola@amias.mx?subject=Contacto%20AMIAS" method="post" enctype="text/plain" class="relative z-[1] bg-white p-4 sm:p-6 h-full w-full lg:max-w-lg">
     <div class="mb-4">
       <label for="name" class="block text-black mb-2">Nombre*</label>
       <input
         type="text"
-        id="name"
+        id="name" autocomplete="name"
         name="name"
         placeholder="Nombre"
         required
@@ -21,7 +21,7 @@ import decorForm from "../../assets/pics/contact-banner_1@4x.png";
       <label for="email" class="block text-black mb-2">Correo electrónico*</label>
       <input
         type="email"
-        id="email"
+        id="email" autocomplete="email"
         name="email"
         placeholder="Correo electrónico"
         required
@@ -40,10 +40,10 @@ import decorForm from "../../assets/pics/contact-banner_1@4x.png";
       ></textarea>
     </div>
 
-    <button type="submit" class="btn-primary w-full">Enviar</button>
+    <button type="submit" class="btn-primary w-full">Abrir en mi correo</button>
   </form>
-  <picture class="absolute right-[-25%] top-[2%] bottom-[2%] hidden lg:block">
-    <Image src={decorForm} alt="decor" />
+  <picture class="pointer-events-none absolute right-[-25%] top-[2%] bottom-[2%] hidden lg:block">
+    <Image src={decorForm} alt="" />
   </picture>
 </div>
 

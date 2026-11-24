@@ -4,18 +4,18 @@ import Hero from "../components/sections/Hero.astro";
 import Process from "../components/sections/Process.astro";
 import Services from "../components/sections/Services.astro";
 import Sponsors from "../components/sections/Sponsors.astro";
-// import Team from "../components/sections/Team.astro";
+import Questions from "../components/sections/Questions.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout
-  title="Alianza Mexicana para la IA Soberana"
+  title="AMIAS | Alianza Mexicana para la IA Soberana"
   description="Impulsamos el desarrollo y la adopción de la inteligencia artificial en México a través de la colaboración, la investigación y la soberanía tecnológica."
 >
   <Hero />
-  <Sponsors />
   <Services />
   <Process />
-  {/* <Team /> */}
+  <Sponsors />
+  <Questions />
   <Contact />
 </MainLayout>

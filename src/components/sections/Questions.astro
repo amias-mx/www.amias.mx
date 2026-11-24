@@ -1,0 +1,16 @@
+---
+import Section from "./Section.astro";
+import SectionTitle from "../ui/SectionTitle.astro";
+import alianza from "../../data/alianza.json";
+---
+<Section id="preguntas">
+  <SectionTitle sectionTitle="Preguntas frecuentes" />
+  <dl>
+    {alianza.questions.map(({question, answer}) => <div><dt>{question}</dt><dd>{answer}</dd></div>)}
+  </dl>
+</Section>
+<style>
+  dl {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(18rem,100%),1fr));gap:2rem}
+  dl div {border-top:2px solid #a7bcae;padding-top:1rem}
+  dt {font-size:1.2rem;font-weight:500;color:#173a2d} dd {font-size:1rem;line-height:1.6;margin-top:.6rem}
+</style>
