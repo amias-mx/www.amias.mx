@@ -1,10 +1,12 @@
 ---
-const { sectionTitle, description } = Astro.props;
+const {sectionTitle, description} = Astro.props;
 ---
-
-<div class="flex flex-col items-center gap-10 mb-20 sm:flex-row">
-  <h2 class="greenhead text-center sm:text-left">{sectionTitle}</h2>
-  <p class="w-auto text-center sm:text-left sm:w-[580px]">
-    {description}
-  </p>
+<div class="section-intro">
+  <h2>{sectionTitle}</h2>
+  {description && <p>{description}</p>}
 </div>
+<style>
+  .section-intro {max-width:65ch;margin-bottom:2rem}
+  h2 {color:#173a2d;font-size:clamp(2rem,4vw,3.25rem);line-height:1.1;letter-spacing:-.045em}
+  p {line-height:1.6;margin-top:.75rem}
+</style>

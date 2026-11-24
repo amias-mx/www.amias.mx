@@ -21,21 +21,21 @@ const sponsors = [
 ---
 
 <Section id="sponsors">
-  <div class="text-center mb-10">
+  <div class="mb-8">
     <h2 class="mb-5">Participantes</h2>
-    <p class="max-w-3xl mx-auto">
-      Los participantes actuales de la Alianza Mexicana para la IA Soberana representan a más de 70 organizaciones, que generan más de 10mil de empleos en todo el país—y esa lista sigue creciendo.
+    <p class="max-w-3xl">
+      Estas organizaciones participan en la Alianza Mexicana para la IA Soberana.
     </p>
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-12 max-w-6xl mx-auto">
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
     {
       sponsors.map((sponsor) => (
-        <div class="flex items-center justify-center min-h-[96px]">
+        <div class="flex items-center justify-center h-24 border border-[#dae2dc] rounded-lg">
           <div class="relative w-full max-w-[180px] h-full px-4">
             <Image 
               src={sponsor.logo} 
               alt={sponsor.alt} 
-              loading="eager"
+              loading="lazy"
               class="w-full h-full object-contain"
             />
           </div>

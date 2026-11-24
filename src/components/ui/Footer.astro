@@ -15,7 +15,7 @@ const logos = [
 ]
 ---
 
-<section class="sm:px-5">
+<footer class="sm:px-5">
   <div class="w-full max-w-[1240px] mx-auto">
     <div
       class="px-[15px] bg-dark text-white py-[55px] lg:px-[60px] sm:rounded-t-[45px]"
@@ -25,7 +25,7 @@ const logos = [
           class="flex flex-col lg:flex-row gap-7 items-center justify-between"
         >
           <picture>
-            <a href="#home">
+            <a href="/">
               <Image src={Logo} alt="Alianza Mexicana para la IA Soberana" />
             </a>
           </picture>
@@ -44,10 +44,10 @@ const logos = [
 
         <div class="flex flex-col lg:flex-row mt-[66px] mb-[51px]">
           <div class="flex text-center lg:text-start flex-col w-full lg:w-[30%]">
-            <h3 class="mb-5">Contáctanos:</h3>
+            <h3 class="mb-5">Contacto</h3>
             <div class="flex flex-col justify-between gap-4">
-              <span>Correo: hola@amias.mx</span>
-              <span>Teléfono: (+52) 55 6651 8800</span>
+              <a href="mailto:hola@amias.mx">hola@amias.mx</a>
+              <a href="tel:+525566518800">+52 55 6651 8800</a>
               <span class="lg:w-3/4">
                 Av. Unión #163<br />
                 Piso 1, Col. Lafayette<br />
@@ -67,9 +67,9 @@ const logos = [
         class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0"
       >
         <span>
-          Algunos Derechos Reservados, ®2025 Alianza Mexicana para la IA Soberana
+          © {new Date().getUTCFullYear()} Alianza Mexicana para la IA Soberana. Algunos derechos reservados.
         </span>
       </div>
     </div>
   </div>
-</section>
+</footer>

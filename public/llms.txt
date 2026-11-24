@@ -1,0 +1,10 @@
+# Alianza Mexicana para la IA Soberana (AMIAS)
+
+> Alianza mexicana dedicada a la investigación de modelos de inteligencia artificial, la formación de talento y el uso responsable de la IA en México.
+
+## Información oficial
+
+- [La alianza, sus iniciativas y cómo participar](https://www.amias.mx/index.md): Resumen en español, preguntas frecuentes y datos de contacto.
+- [Iniciativas](https://www.amias.mx/#iniciativas): Investigación de modelos fundacionales y formación en IA.
+- [Participantes](https://www.amias.mx/#sponsors): Organizaciones que aparecen en el sitio oficial.
+- [Incorporación a la alianza](https://amias.zapier.app/unete): Formulario de AMIAS para quienes desean participar.
