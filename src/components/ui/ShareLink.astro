@@ -1,0 +1,35 @@
+<div id="share-controls" hidden>
+  <button type="button" class="underline underline-offset-4 cursor-pointer">Compartir AMIAS</button>
+  <span role="status" class="block text-sm"></span>
+  <input hidden readonly aria-label="Enlace de AMIAS para copiar" value="https://www.amias.mx/" class="bg-white text-black rounded p-2" />
+</div>
+<script>
+  const controls = document.querySelector<HTMLElement>("#share-controls");
+  if (controls) {
+    controls.hidden = false;
+    const button = controls.querySelector("button")!;
+    const status = controls.querySelector('[role="status"]')!;
+    const field = controls.querySelector("input")!;
+    const url = field.value;
+    button.addEventListener("click", async () => {
+      status.textContent = "";
+      if (navigator.share) {
+        try {
+          await navigator.share({title: "Alianza Mexicana para la IA Soberana", url});
+          return;
+        } catch (error) {
+          if (error instanceof DOMException && error.name === "AbortError") return;
+        }
+      }
+      try {
+        await navigator.clipboard.writeText(url);
+        status.textContent = "Enlace copiado.";
+      } catch {
+        field.hidden = false;
+        field.focus();
+        field.select();
+        status.textContent = "Copia el enlace seleccionado.";
+      }
+    });
+  }
+</script>

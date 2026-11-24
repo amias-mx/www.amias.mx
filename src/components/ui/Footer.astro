@@ -5,6 +5,7 @@ import Github from "../../assets/github.svg";
 import Logo from "../../assets/logo-alt.svg";
 import Twitter from "../../assets/twitter.svg";
 import HF from "../../assets/hf.svg";
+import ShareLink from "./ShareLink.astro";
 import ShortForm from "../ui/ShortForm.astro";
 
 const logos = [
@@ -29,6 +30,7 @@ const logos = [
               <Image src={Logo} alt="Alianza Mexicana para la IA Soberana" />
             </a>
           </picture>
+          <ShareLink />
           <ul class="flex gap-5">
             {logos.map((logo) => (
               <li>

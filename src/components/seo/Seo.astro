@@ -1,7 +1,11 @@
 ---
+import { getImage } from "astro:assets";
+import artwork from "../../../public/og.png";
 import site from "../../data/siteData.json";
 import jsonLDGenerator from "../../utils/jsonLD";
-const {title, description, image = site.image, robots = false} = Astro.props;
+const {title, description, robots = false} = Astro.props;
+const card = await getImage({src: artwork, format: "jpeg", width: 1200, quality: 85});
+const cardUrl = new URL(card.src, site.siteUrl).href;
 const canonical = new URL(Astro.url.pathname, site.siteUrl).href;
 ---
 {!robots && <link rel="canonical" href={canonical} />}
@@ -13,15 +17,16 @@ const canonical = new URL(Astro.url.pathname, site.siteUrl).href;
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
-<meta property="og:image" content={image.src} />
-<meta property="og:image:type" content="image/png" />
+<meta property="og:image" content={cardUrl} />
+<meta property="og:image:type" content="image/jpeg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content={image.alt} />
+<meta property="og:image:alt" content={site.image.alt} />
+<meta name="twitter:site" content={site.social.twitter} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
-<meta name="twitter:image" content={image.src} />
-<meta name="twitter:image:alt" content={image.alt} />
+<meta name="twitter:image" content={cardUrl} />
+<meta name="twitter:image:alt" content={site.image.alt} />
 {robots && <meta name="robots" content="noindex" />}
 {!robots && <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLDGenerator()).replace(/</g, "\\u003c")} />}
