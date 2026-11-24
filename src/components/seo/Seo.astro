@@ -1,11 +1,8 @@
 ---
-import { getImage } from "astro:assets";
-import artwork from "../../../public/og.png";
 import site from "../../data/siteData.json";
 import jsonLDGenerator from "../../utils/jsonLD";
 const {title, description, robots = false} = Astro.props;
-const card = await getImage({src: artwork, format: "jpeg", width: 1200, quality: 85});
-const cardUrl = new URL(card.src, site.siteUrl).href;
+const cardUrl = new URL(site.image.src, site.siteUrl).href;
 const canonical = new URL(Astro.url.pathname, site.siteUrl).href;
 ---
 {!robots && <link rel="canonical" href={canonical} />}
